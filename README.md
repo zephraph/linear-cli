@@ -1,5 +1,4 @@
-linear-cli
-==========
+# linear-cli
 
 A cli tool to interface with linear
 
@@ -9,35 +8,43 @@ A cli tool to interface with linear
 [![License](https://img.shields.io/npm/l/linear-cli.svg)](https://github.com/zephraph/linear-cli/blob/master/package.json)
 
 <!-- toc -->
-* [Usage](#usage)
-* [Commands](#commands)
-<!-- tocstop -->
+
+- [Usage](#usage)
+- [Commands](#commands)
+  <!-- tocstop -->
+
 # Usage
+
 <!-- usage -->
+
 ```sh-session
 $ npm install -g linear-cli
-$ linear-cli COMMAND
+$ linear COMMAND
 running command...
-$ linear-cli (-v|--version|version)
-linear-cli/0.0.0 darwin-x64 node-v10.15.3
-$ linear-cli --help [COMMAND]
+$ linear (-v|--version|version)
+linear/0.0.0 darwin-x64 node-v10.15.3
+$ linear --help [COMMAND]
 USAGE
-  $ linear-cli COMMAND
+  $ linear COMMAND
 ...
 ```
-<!-- usagestop -->
-# Commands
-<!-- commands -->
-* [`linear-cli hello [FILE]`](#linear-cli-hello-file)
-* [`linear-cli help [COMMAND]`](#linear-cli-help-command)
 
-## `linear-cli hello [FILE]`
+<!-- usagestop -->
+
+# Commands
+
+<!-- commands -->
+
+- [`linear hello [FILE]`](#linear-hello-file)
+- [`linear help [COMMAND]`](#linear-help-command)
+
+## `linear hello [FILE]`
 
 describe the command here
 
 ```
 USAGE
-  $ linear-cli hello [FILE]
+  $ linear hello [FILE]
 
 OPTIONS
   -f, --force
@@ -45,19 +52,19 @@ OPTIONS
   -n, --name=name  name to print
 
 EXAMPLE
-  $ linear-cli hello
+  $ linear hello
   hello world from ./src/hello.ts!
 ```
 
 _See code: [src/commands/hello.ts](https://github.com/zephraph/linear-cli/blob/v0.0.0/src/commands/hello.ts)_
 
-## `linear-cli help [COMMAND]`
+## `linear help [COMMAND]`
 
-display help for linear-cli
+display help for linear
 
 ```
 USAGE
-  $ linear-cli help [COMMAND]
+  $ linear help [COMMAND]
 
 ARGUMENTS
   COMMAND  command to show help for
@@ -67,4 +74,5 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.2.1/src/commands/help.ts)_
+
 <!-- commandsstop -->
