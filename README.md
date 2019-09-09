@@ -9,8 +9,10 @@ A cli tool to interface with linear
 
 <!-- toc -->
 
+- [linear-cli](#linear-cli)
 - [Usage](#usage)
 - [Commands](#commands)
+- [Contributing](#contributing)
   <!-- tocstop -->
 
 # Usage
@@ -22,7 +24,7 @@ $ npm install -g linear-cli
 $ linear COMMAND
 running command...
 $ linear (-v|--version|version)
-linear/0.0.0 darwin-x64 node-v10.15.3
+linear-cli/0.0.0 darwin-x64 node-v10.15.3
 $ linear --help [COMMAND]
 USAGE
   $ linear COMMAND
@@ -35,28 +37,29 @@ USAGE
 
 <!-- commands -->
 
-- [`linear hello [FILE]`](#linear-hello-file)
+- [`linear create`](#linear-create)
 - [`linear help [COMMAND]`](#linear-help-command)
 
-## `linear hello [FILE]`
+## `linear create`
 
-describe the command here
+Creates a new issue. Flags not provided will be prompted for at runtime.
 
 ```
 USAGE
-  $ linear hello [FILE]
+  $ linear create
 
 OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  -T, --team=team
+  -h, --help         show CLI help
+  -l, --label=label  label to be added to the issue
+  -t, --title=title
 
 EXAMPLE
-  $ linear hello
-  hello world from ./src/hello.ts!
+  $ linear create
+  $ linear create --title "Fix a bug" --label Bug
 ```
 
-_See code: [src/commands/hello.ts](https://github.com/zephraph/linear-cli/blob/v0.0.0/src/commands/hello.ts)_
+_See code: [src/commands/create.ts](https://github.com/zephraph/linear-cli/blob/v0.0.0/src/commands/create.ts)_
 
 ## `linear help [COMMAND]`
 
@@ -76,3 +79,17 @@ OPTIONS
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.2.1/src/commands/help.ts)_
 
 <!-- commandsstop -->
+
+# Contributing
+
+Install dependencies via yarn
+
+```
+yarn
+```
+
+Start dev watch mode to ensure ts types are up-to-date
+
+```
+yarn dev
+```
